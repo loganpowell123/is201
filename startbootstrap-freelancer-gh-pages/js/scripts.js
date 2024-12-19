@@ -52,3 +52,20 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+const jokes = [
+    "Why don't skeletons fight each other? They don't have the guts.",
+    "Why did the bicycle fall over? Because it was two-tired!",
+    "What do you call fake spaghetti? An impasta!",
+    "Why can't your nose be 12 inches long? Because then it would be a foot!",
+    "Why don't scientists trust atoms? Because they make up everything!"
+];
+
+const jokeElement = document.getElementById("joke");
+const jokeButton = document.getElementById("generate-joke");
+
+jokeButton.addEventListener("click", () => {
+    const randomIndex = Math.floor(Math.random() * jokes.length);
+    jokeElement.textContent = jokes[randomIndex];
+});
